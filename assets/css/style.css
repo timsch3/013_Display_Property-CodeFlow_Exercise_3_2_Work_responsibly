@@ -10,6 +10,7 @@
 /*--------------- Whole Page */
 body {
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -58,6 +59,19 @@ section:first-of-type h2 {
     font-size: 2.5em;
     max-width: 50vw;
 }
+section:first-of-type a:link, section:first-of-type a:visited {
+    text-decoration: none;
+    color: black;
+}
+section:first-of-type a:hover, section:first-of-type a:active {
+    text-decoration: underline;
+}
+section:first-of-type p {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-bottom: 7vh;
+}
+
 /* Social media links */
 aside {
     text-align: right;
@@ -67,37 +81,89 @@ aside ul {
     list-style: none;
 }
 aside img {
-    width: 2vw;
+    width: 2em;
     height: auto;
     margin-bottom: 1vh;
 }
-section:first-of-type p span {
+
+/* Link arrows */
+section:first-of-type p span, footer span {
     display: inline-block;
     font-size: 2.5em;
     transform: scaleY(0.5);
     padding-right: 1vw;
 }
-section:first-of-type p {
-    font-size: 0.8em;
-    font-weight: bold;
-    padding-bottom: 7vh;
-}
 
 /*--------------- Section 2 (What's your struggle) */
-section:nth-of-type(2) p {
+#struggles p {
     font-family: Roboto Light, sans-serif;
     font-weight: bold;
 }
-section:nth-of-type(2) div {
+#struggles div {
     padding: 3vh 10vw 5vh 0;
     text-align: center;
 }
-section:nth-of-type(2) div img {
+#struggles div img {
     margin: 30px;
+    transition: 0.2s ease-in-out;
 }
-section:nth-of-type(2) div img:hover {
-    box-shadow: 0 0 10px 5px #33333344;
+#struggles div img:hover {
+    box-shadow: 0 0 10px 5px #33333322;
     transition: 0.2s ease-in-out;
 }
 
 /*--------------- Section 3 (Features resources) */
+#features > h2 {
+    padding-bottom: 20px;
+}
+#features figure {
+    margin: 0;
+    display: inline-block;
+    padding: 7vh 7vw;
+    text-align: center;
+}
+#features img {
+    width: 50vw;
+    padding-bottom: 10px;
+}
+#features figure a:link, #features figure a:visited {
+    text-decoration: none;
+    color: #666;
+}
+#features figure a:hover, #features figure a:active {
+    text-decoration: underline;
+}
+#features figure h3 {
+    color: #333;
+}
+#features figure p {
+    font-family: Roboto Light;
+    font-weight: bold;
+    color: #666;
+    font-size: 0.8em;
+}
+#features div:nth-of-type(odd) {
+    text-align: left;
+}
+#features div:nth-of-type(even) {
+    text-align: right;
+}
+#features div:last-of-type {
+    padding-bottom: 50px;
+}
+
+/*--------------- Footer */
+footer {
+    text-align: center;
+    padding: 100px 0;
+    font-family: Roboto Light, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+footer a:link, footer a:visited {
+    text-decoration: none;
+    color: #666;
+}
+footer a:hover, footer a:active {
+    text-decoration: underline;
+}
